@@ -61,11 +61,11 @@ function onSearchCountry(evt) {
     }
 
     if (numberCountriesFound > 10) {
-      Notiflix.Notify.warning(
+      Notiflix.Notify.info(
         'Too many matches found. Please enter a more specific name'
       );
+      refs.countryList.innerHTML = '';
+      refs.countryInfo.innerHTML = '';
     }
-
-    refs.countryInfo.innerHTML = '';
   }
 }
